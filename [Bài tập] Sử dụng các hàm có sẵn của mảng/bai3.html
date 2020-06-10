@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let chuoi = prompt('nhập chuỗi kí tự');
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let epchuoi = chuoi.toString();
+        let result = []
+        for (let i = 0 ; i < epchuoi.length ; i++) {
+            let indexUpper = UPPER.indexOf(epchuoi[i])
+            let indexLower = LOWER.indexOf(epchuoi[i])
+
+            if (indexUpper > 0) {
+                result.push(LOWER[indexUpper])
+            }
+
+            if (indexLower > 0) {
+                result.push(UPPER[indexLower])
+            }
+        }
+
+        result = result.join("")
+
+        document.write(result)
+    </script>
+</body>
+</html>
