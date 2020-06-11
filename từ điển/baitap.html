@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="dulieu">
+    <button type="button" onclick="tudien()">dịch</button>
+    <div id="result"></div>
+    <script>
+        function tudien() {
+        let tienganh = ["hello", "hi", "you", "are", "dog" ];
+        let tiengviet = ["xin chào", "chào", "bạn", "là", "chó"];
+        let x = document.getElementById('dulieu').value;
+        let y;
+        for (let i = 0 ; i < tienganh.length; i++ ) {
+            if (x === tienganh[i]) {
+                y = tiengviet[i];
+                document.getElementById('result').innerHTML=y;
+            } else {
+                document.getElementById('result').innerHTML="không có trong từ điển";
+            }
+        }
+    }
+    </script>
+</body>
+</html>
