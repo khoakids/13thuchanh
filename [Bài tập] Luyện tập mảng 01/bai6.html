@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="giatri">
+    <button type="button" onclick="xacnhan()"  >Xác nhận</button>
+
+    <script>
+        function xacnhan(){
+        let x = Array();
+        let so = +document.getElementById('giatri').value;
+        let check = false
+        for (let i = 0 ; i < 10 ; i++) {
+            x.push(Math.floor(Math.random() * 20))
+            if (so === x[i]) {
+                document.write(`Số ${so} nằm trong mảng`)
+                check = true
+                
+            } 
+            }
+            
+           if (check == false) {
+               document.write(`Số ${so} không nằm trong mảng`)
+           }
+           document.write("</br>")
+           document.write(`Mảng bao gồm ${x}`)
+        }
+        
+        
+
+    </script>
+</body>
+</html>

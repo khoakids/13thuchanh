@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x = Array(); 
+            while(x.length < 10) {
+            let y = Math.floor(Math.random()*10)
+            // Kiểm tra
+            let check = true
+            
+
+            for(let i = 0;i < x.length; i++) {
+                if(x[i] == y) {
+                    check =false
+                    break;
+            }
+                 
+            }
+            if(check) {
+                x.push(y)
+            }
+        }
+
+        document.write(x);
+        document.write("</br>")
+            let max = x[0];
+            let thutu = 0;
+            for (i = 1; i < x.length ; i++) {
+                if (x[i] > max) {
+                    max = x[i]
+                    thutu = i
+                }
+            }
+            document.write('giá trị lớn nhất là ' + max + ' tại vị tri ' + thutu)
+    </script>
+</body>
+
+</html>

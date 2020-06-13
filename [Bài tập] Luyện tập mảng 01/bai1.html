@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = Array();
+        let dem = 0;
+        for (let i = 0 ; i < 10 ; i++) {
+            x.push(Math.floor(Math.random() * 20));
+            if (x[i] >= 10) {
+                dem += 1;
+            }
+           
+        }
+        document.write(x);
+        document.write("</br>");
+        document.write(`số lượng số lớn hơn 10 là ${dem} số`);
+        
+        
+    </script>
+</body>
+</html>

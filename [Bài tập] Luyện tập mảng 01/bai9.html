@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let a = Array()
+            let b = Array()
+            let c = Array()
+            for (let i = 0 ; i < 20 ; i++) {
+                c.push(Math.floor(Math.random() * 20))
+                if (i < 10) {
+                a.push(Math.floor(Math.random() * 20))
+                b.push(Math.floor(Math.random() * 20))
+            }
+                
+            }
+            
+            document.write(`mảng a trước khi được sát nhập ${a}`)
+            document.write("</br>")
+            document.write(`mảng b trước khi được sát nhập ${b}`)
+            document.write("</br>")
+            document.write(`mảng c trước khi được sát nhập ${c}`)
+            document.write("</br>")
+            c.concat(a, b)
+            let d = c.concat(a, b)
+            document.write(`mảng sau được sát nhập ${d}`)
+    </script>
+</body>
+</html>

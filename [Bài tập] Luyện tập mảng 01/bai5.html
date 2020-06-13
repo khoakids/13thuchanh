@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="giatri">
+    <button type="button" onclick="xacnhan()">xác nhận</button>
+
+    <script>
+        function xacnhan(){
+        let k = +document.getElementById('giatri').value;    
+        let x = Array()
+        let y
+        let dem = 0
+        for (let i = 0 ; i < k ; i++) {
+            y = Math.floor(Math.random()*30 *( Math.random() > 0.5 ? 1 : -1)) 
+            x.push(y)
+            if (x[i] < 0 ) {
+                dem += 1
+            }
+        }
+        document.write(x)
+        document.write("</br>")
+        document.write(dem)
+        
+        }
+    </script>
+</body>
+</html>

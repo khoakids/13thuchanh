@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = Array()
+        
+       while (x. length < 10 ) {
+           let y = Math.floor(Math.random() * 20)
+           let check = true
+           for (let i = 0 ; i < x.length ; i++) {
+               if (x[i] == y) {
+                   check = false
+                   break;
+               }
+           }
+           if (check) {
+               x.push(y)
+           }
+       }
+        document.write(`mảng trước khi được sắp xếp ${x}`)
+        x.sort(function(a, b){return b - a})
+        document.write("</br>")
+        document.write(`mảng sau khi được sắp xếp ${x}`) 
+    </script>
+</body>
+</html>
